@@ -17,7 +17,7 @@ public struct PreviewData<ViewModel>: Identifiable {
 }
 
 extension Previewable {
-    static var debugPreviews: some View {
+    public static var debugPreviews: some View {
         Group {
             AnyView(create(from: defaultViewModel.viewModel))
                 .environment(\.colorScheme, .light)
@@ -33,7 +33,7 @@ extension Previewable {
         .previewDependencies()
     }
 
-    static var devicePreviews: some View {
+    public static var devicePreviews: some View {
         Group {
             AnyView(create(from: defaultViewModel.viewModel))
                 .environment(\.colorScheme, .light)
