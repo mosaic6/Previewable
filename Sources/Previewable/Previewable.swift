@@ -1,9 +1,7 @@
 import Foundation
 import SwiftUI
 
-@available(iOS 13.0, *)
-@available(macOS 10.15, *)
-protocol Previewable {
+public protocol Previewable {
     associatedtype ViewModel
     associatedtype Preview: View
 
@@ -13,13 +11,11 @@ protocol Previewable {
     static func create(from viewModel: ViewModel) -> Preview
 }
 
-struct PreviewData<ViewModel>: Identifiable {
-    let id: String
+public struct PreviewData<ViewModel>: Identifiable {
+    public let id: String
     let viewModel: ViewModel
 }
 
-@available(iOS 13.0, *)
-@available(macOS 10.15, *)
 extension Previewable {
     static var debugPreviews: some View {
         Group {
