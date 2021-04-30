@@ -1,3 +1,3 @@
 # Previewable
 
-A description of this package.
+Unlock the power of SwiftUI Preview with `Previewable`.
