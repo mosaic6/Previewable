@@ -13,7 +13,7 @@ public protocol Previewable {
 
 public struct PreviewData<ViewModel>: Identifiable {
     public let id: String
-    let viewModel: ViewModel
+    public let viewModel: ViewModel
 }
 
 extension Previewable {
