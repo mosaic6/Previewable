@@ -11,7 +11,7 @@ public protocol Previewable {
     static func create(from viewModel: ViewModel) -> Preview
 }
 
-public struct PreviewData<ViewModel>: Identifiable {
+public class PreviewData<ViewModel>: Identifiable, ObservableObject {
     public let id: String
     let viewModel: ViewModel
 

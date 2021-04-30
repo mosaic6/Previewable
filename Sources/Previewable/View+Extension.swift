@@ -9,11 +9,8 @@ import Foundation
 import SwiftUI
 
 extension View {
-
-    #if DEBUG
     func previewDependencies() -> some View {
         self
             .environmentObject(Theme())
     }
-    #endif
 }
