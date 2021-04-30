@@ -13,7 +13,12 @@ public protocol Previewable {
 
 public struct PreviewData<ViewModel>: Identifiable {
     public let id: String
-    public let viewModel: ViewModel
+    let viewModel: ViewModel
+
+    public init(id: String, viewModel: ViewModel) {
+        self.id = id
+        self.viewModel = viewModel
+    }
 }
 
 extension Previewable {
